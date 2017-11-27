@@ -1,0 +1,6 @@
+/*.backgroundsize*/ 
+.site-title {
+  /*background: url(../img/greatfrisbylogo-559x288.png) left top no-repeat;*/
+  background: url(../img/greatfrisbylogo-559x288.png) 50% top no-repeat;
+  background-size: 275px 142px;
+}

@@ -1,0 +1,180 @@
+/* make browsers include padding and border inside the width */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* add texture to the background */
+body {
+  background: url(../img/bg-texture-light.jpg) 50% top repeat;
+}
+
+/* basics for links */
+nav a {
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* center the header and set width to 90% of the browser */
+header {
+  width: 100%;
+  margin: 0;
+  /*margin-left: 5%;*/
+}
+
+
+/* setup the logo by pushing the text off screen and adding background image */
+.site-title {
+  /*float: left;*/
+  text-indent: -9999px;
+  width: 320px;
+  height: 165px;
+  margin: 0 auto;
+  background: url(../img/greatfrisbylogo-320x165.png) 50% top no-repeat;
+  /*background: url(../img/bg-logo-120x116.png) left top no-repeat;*/
+}
+
+
+/* make room for the logo */
+nav ul {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5px;
+}
+
+
+/* move nav to single line */
+/* min-width helps this work at higher resolutions */
+header nav ul {
+  border-top: 1px dotted #574f4b;
+  margin: auto;
+  margin-top: 5px;
+  padding: 0;
+  position: relative;
+  float: left; 
+  min-width: 100%;
+}
+
+
+/* move to horizontal by floating <li>s left */
+/* position: relative needed for the :after later */
+header nav li {
+  float: left;
+  width: 33%;
+  text-align: center;
+  position: relative;
+}
+
+
+/* tweaks to padding/font-size */
+header nav li a {
+  font-family: Limelight; color: #574f4b; 
+  display: block;
+  line-height: 1.8em;
+  text-align: center;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+
+
+  padding: .25em 10px;
+  font-size: .9em;
+}
+
+
+/* add the nav separator in the primary nav */
+header nav li:after {
+  content: " ";
+  position: absolute;
+  right: 0;
+  top: .4em;
+  font-weight: bold;
+  color: #574f4b;
+}
+
+
+/* remove the nav separator form the last child */
+header nav li:last-child:after {
+  content: "";
+}
+
+
+
+
+/************************************************************************
+  Primary Content for Smallest display
+************************************************************************/
+
+/* add some basic layout and some background texture */
+/* set the text to white because the background is dark */
+.destinationblock{
+  /*background: #000 url(../img/bg-texture-dark.jpg) 50% top repeat;*/
+  background: #574f4b ;
+  width: 100%;
+  float: left;
+  position: relative;
+  padding-bottom: 20px;
+  padding-top:20px;
+  margin-top: 10px;
+  color: #cac3ac;
+  text-align: center;
+}
+
+
+/* we added a wrapper around the contents of the .shirt section */
+/* this will be necessary later because the dark texture runs the full width of the site */
+.destinationblock .wrapper {
+  width: 90%;
+  margin: auto;
+}
+
+/* adjust the type a bit */
+.destination-info p {
+  text-align: left;
+  line-height: 1.5em;
+}
+
+.destination-info h1 {
+  text-align: center;
+  line-height: 1.5em;
+
+  font-family: Limelight; color: #cac3ac; 	
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  font-weight: lighter;
+  font-size: 1.5em;
+   margin: 0;
+}
+
+.destination-info a {
+color: #cac3ac;
+text-decoration:underline;
+}
+
+img.other{
+ max-width: 90%;
+ max-height: 90%;
+}
+
+img.key {
+  max-width: 100%;
+  margin-top: 20px;
+}
+
+img.secondary {
+  max-width: 100%;
+  margin-top: 10px;
+}
+
+/* challenges stuffs */
+.destination-info .challenges li{
+  padding-top: 10px;
+  margin:0;
+  text-align: left;
+}
+
+
+
+
